@@ -70,17 +70,19 @@ return;
 
     public void SearchList(String s){
       //  String word = s;
+
         Log.w("tag", "onTextChanged " + s);
 
-
+        String word = s.toLowerCase();
         {
 
 
             ArrayList<User> Chosen = new ArrayList<User>();
 
             for (int i = 0; i < UsersList.size(); i++) {
+                String temp = UsersList.get(i).getName().toLowerCase();
 
-                if (UsersList.get(i).getName().contains(s))
+                if (temp.contains(word))
                     Chosen.add(UsersList.get(i));
             }
 

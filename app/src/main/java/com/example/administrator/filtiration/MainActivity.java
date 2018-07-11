@@ -41,23 +41,23 @@ public class MainActivity extends AppCompatActivity {
               recyclerView.setLayoutManager(new LinearLayoutManager(this));
               recyclerView.setAdapter(adapter);
 
-//              editText.addTextChangedListener(new TextWatcher() {
-//                  @Override
-//                  public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//
-//                  }
-//
-//                  @Override
-//                  public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//viewModel.SearchList(charSequence.toString());
-////Toast.makeText(getApplicationContext(),charSequence.toString(),Toast.LENGTH_SHORT).show();
-//                  }
-//
-//                  @Override
-//                  public void afterTextChanged(Editable editable) {
-//
-//                  }
-//              });
+              editText.addTextChangedListener(new TextWatcher() {
+                  @Override
+                  public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                  }
+
+                  @Override
+                  public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                     viewModel.SearchList(charSequence.toString());
+                     //Toast.makeText(getApplicationContext(),charSequence.toString(),Toast.LENGTH_SHORT).show();
+                  }
+
+                  @Override
+                  public void afterTextChanged(Editable editable) {
+
+                  }
+              });
 
 
 
